@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Contador de Cliques</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    #contador {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    #botao {
+      padding: 15px 30px;
+      font-size: 1.5em;
+      cursor: pointer;
+      border: none;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+    #botao:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
 
+  <div id="contador">Cliques: 0</div>
+  <button id="botao">Clique Aqui</button>
+
+  <script>
+    let cliques = 0;
+    const contador = document.getElementById('contador');
+    const botao = document.getElementById('botao');
+
+    botao.addEventListener('click', () => {
+      cliques++;
+      contador.textContent = 'Cliques: ' + cliques;
+    });
+  </script>
+
+</body>
+</html>
